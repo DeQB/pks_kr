@@ -1,0 +1,16 @@
+<div flex="" layout="row" layout-align="center center">
+    <div flex="">
+        <md-input-container class="md-block" flex-gt-sm>
+            <label>Логин</label>
+            <input ng-model="user.login" required>
+        </md-input-container>
+        <md-input-container class="md-block" flex-gt-sm>
+            <label>Пароль</label>
+            <input ng-model="user.password" type="password" required>
+        </md-input-container>
+    </div>
+    <div flex="" layout-align="center center">
+        <md-button class="md-primary md-hue-1" ng-click="add(user)">Сохранить</md-button>
+        <md-button class="md-accent" ng-click="closeDialogReg()">Отменить</md-button>
+    </div>
+</div>

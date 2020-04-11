@@ -1,0 +1,27 @@
+<md-content>
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h2 flex="">Авторизация</h2>
+        </div>
+    </md-toolbar>
+</md-content>
+<div flex="" layout="row" layout-align="center center">
+    <div flex="" layout="column" layout-align="center center">
+        <div flex="">
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Логин</label>
+                <input ng-model="user.login" required>
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Пароль</label>
+                <input ng-model="user.password" required type = "password">
+            </md-input-container>
+            <md-button class="md-primary md-raised" ng-click="login(user)">
+                Вход
+            </md-button>
+            <md-button class="md-primary md-raised" ng-click="showDialogReg(e)">
+                Регистрация
+            </md-button>
+        </div>
+    </div>
+</div>

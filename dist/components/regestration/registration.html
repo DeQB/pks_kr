@@ -1,0 +1,81 @@
+<md-content>
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h2 flex="">Служебный каталог товаров</h2>
+            <md-button aria-label="Open demo menu" ng-click="out()">Выход</md-button>
+        </div>
+    </md-toolbar>
+</md-content>
+<div flex="" layout="row" layout-align="center center">
+    <div flex="">
+        <md-input-container class="md-block" flex-gt-sm>
+            <label>Наименование</label>
+            <input ng-model="worker.tovarName">
+        </md-input-container>
+        <md-input-container class="md-block" flex-gt-sm>
+            <label>Краткое описание</label>
+            <input ng-model="worker.opiName">
+        </md-input-container>
+
+    </div>
+    <div flex="">
+        <md-input-container>
+            <label>Дата</label>
+            <md-datepicker ng-model="worker.date" aria-label="Enter date"></md-datepicker>
+        </md-input-container>
+        <md-input-container>
+            <label>Продолжительность, часы</label>
+            <input ng-model="worker.time">
+        </md-input-container>
+    </div>
+    <div flex="">
+        <div flex="">
+            <md-input-container>
+                <label>Причина</label>
+                <input ng-model="worker.reason">
+            </md-input-container>
+        </div>
+        <div flex="">
+            <md-input-container>
+                <label>Коментарий</label>
+                <input ng-model="worker.comment">
+            </md-input-container>
+        </div>
+    </div>
+</div>
+<div flex="75" layout="row" layout-align="end start">
+    <md-button class="md-primary md-raised" ng-click="add(worker)">
+        Добавить
+    </md-button>
+</div>
+<div flex="" layout="column">
+    <div flex="" layout="row">
+        <div flex="20">ФИО</div>
+        <div flex="15">Дата</div>
+        <div flex="20">Кол-во часов</div>
+        <div flex="20">Причина</div>
+    </div>
+    <div flex="" id="works" ng-repeat="item in works">
+        <div flex="" layout="row" layout-align="center center">
+            <div flex="20">
+                {{item.tovarName}}
+                {{item.opiName}}
+                {{item.midleName}}
+            </div>
+            <div flex="15">
+                {{item.date}}
+            </div>
+            <div flex="20">
+                {{item.time}}
+            </div>
+            <div flex="20">
+                {{item.reason}}
+                {{item.comment}}
+            </div>
+            <div flex="">
+                <md-button class="md-primary md-hue-1" ng-click="showDialogEdit(ev)">Изменить</md-button>
+                <md-button class="md-accent" ng-click="delete(item._id)">Удалить</md-button>
+            </div>
+        </div>
+    </div>
+</div>

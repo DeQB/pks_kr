@@ -1,0 +1,44 @@
+<div flex="" layout="row" layout-align="center center">
+    <div flex="">
+        <md-input-container class="md-block" flex-gt-sm>
+            <label>Наименование товара</label>
+            <input ng-model="work.tovarName" required>
+        </md-input-container>
+        <md-input-container class="md-block" flex-gt-sm>
+            <label><Описание></Описание></label>
+            <input ng-model="work.opiName" required>
+        </md-input-container>
+        <md-input-container class="md-block" flex-gt-sm>
+            <label>Фамилия ответственного</label>
+            <input ng-model="work.midleName" required>
+        </md-input-container>
+    </div>
+    <div flex="">
+        <md-input-container>
+            <label>Дата поставки</label>
+            <input ng-model="work.date" aria-label="Enter date" required>
+        </md-input-container>
+        <md-input-container>
+            <label>Кол-во(шт.)</label>
+            <input ng-model="work.time" required>
+        </md-input-container>
+    </div>
+    <div flex="">
+        <div flex="">
+            <md-input-container>
+                <label>Артикул</label>
+                <input ng-model="work.reason" required>
+            </md-input-container>
+        </div>
+        <div flex="">
+            <md-input-container>
+                <label>Код</label>
+                <input ng-model="work.comment">
+            </md-input-container>
+        </div>
+    </div>
+    <div flex="" layout-align="center center">
+        <md-button class="md-primary md-hue-1" ng-click="edit(work)">Сохранить</md-button>
+        <md-button class="md-accent" ng-click="cancel()">Отменить</md-button>
+    </div>
+</div>
